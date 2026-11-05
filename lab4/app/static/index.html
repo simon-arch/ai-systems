@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ШІ Модератор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>ШІ Модератор</h1>
+    <div class="top-controls">
+      <div id="status" class="status">
+        <span class="dot"></span>
+        <span id="status-text">Перевірка з'єднання...</span>
+      </div>
+      <label class="field">Суворість
+        <select id="strictness">
+          <option value="soft">М'яка</option>
+          <option value="standard" selected>Стандартна</option>
+          <option value="strict">Сувора</option>
+        </select>
+      </label>
+    </div>
+  </header>
+  <main class="layout">
+    <section class="panel chat">
+      <h2 id="chat-title">Чат</h2>
+      <ol id="messages" class="messages"></ol>
+      <div class="composer">
+        <input type="text" id="nickname" maxlength="30" placeholder="Нікнейм" autocomplete="off">
+        <textarea id="input" rows="2" maxlength="1000" placeholder="Повідомлення..."></textarea>
+        <button type="button" id="send" class="send">Надіслати</button>
+      </div>
+    </section>
+    <section class="panel log">
+      <h2 id="log-title">Журнал модерації</h2>
+      <ol id="log" class="log-list"></ol>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
